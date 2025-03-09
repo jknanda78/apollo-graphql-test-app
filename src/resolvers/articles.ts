@@ -1,19 +1,17 @@
-// @ts-nocheck
-const articlesResolver = async (parent, args, context, info) => {
-  console.log("Articles resolver called");
-  const articles = [
-    {
-      id: "123",
-      title: "Article 1",
-      author: {
-        id: "abcd-1234",
-        name: "John Doe",
-        email: "john.doe@email.com",
-      },
-    },
-  ];
+import getArticleList from "../data-access/getArticleList";
 
-  return articles;
+const articlesResolver = async (
+  parent: any,
+  args: any,
+  context: any,
+  info: any
+): Promise<{}> => {
+  const articles = await getArticleList();
+
+  return {
+    items: articles,
+    totalCount: articles.length,
+  };
 };
 
 export default articlesResolver;

@@ -18,13 +18,14 @@ const typeDefs = gql`
     title: String!
   }
 
-  type Articles {
-    articles: [Article]
-    error: [Error]
+  type ArticleList {
+    items: [Article!]!
+    totalCount: Int!
   }
 
   type Query {
-    article: Article
+    article(id: ID!): Article
+    articles: ArticleList
   }
 `;
 

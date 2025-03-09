@@ -6,7 +6,7 @@ const articleResolver = async (
   context: any,
   info: any
 ): Promise<{}> => {
-  const article = await getArticleById("9912fbcf-afa9-4f00-99d0-779ce8ee2f10");
+  const article = await getArticleById(args.id);
 
   return article;
 };
