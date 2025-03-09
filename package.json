@@ -1,0 +1,25 @@
+{
+  "name": "apollo-graphql-project",
+  "version": "1.0.0",
+  "description": "A project that sets up an Apollo GraphQL server.",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "build": "tsc",
+    "dev": "ts-node-dev src/index.ts"
+  },
+  "dependencies": {
+    "apollo-server": "^3.6.7",
+    "better-sqlite3": "^11.8.1",
+    "dataloader": "^2.2.3",
+    "graphql": "^15.5.0",
+    "knex": "^3.1.0"
+  },
+  "devDependencies": {
+    "ts-node": "^10.4.0",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.5.4"
+  },
+  "author": "",
+  "license": "ISC"
+}
