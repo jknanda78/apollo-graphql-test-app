@@ -1,4 +1,4 @@
-import getAuthorById from "../data-access/getAuthorById";
+import getAuthorById, { authorLoader } from "../data-access/getAuthorById";
 
 const authorResolver = async (
   parent: any,
@@ -6,9 +6,10 @@ const authorResolver = async (
   context: any,
   info: any
 ): Promise<{}> => {
-  const author = await getAuthorById(parent.userId);
+  // const author = await getAuthorById(parent.userId);
 
-  return author;
+  // return author;
+  return authorLoader.load(parent.userId);
 };
 
 export default authorResolver;
