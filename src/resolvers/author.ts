@@ -6,9 +6,6 @@ const authorResolver = async (
   context: any,
   info: any
 ): Promise<{}> => {
-  // const author = await getAuthorById(parent.userId);
-
-  // return author;
   return authorLoader.load(parent.userId);
 };
 
