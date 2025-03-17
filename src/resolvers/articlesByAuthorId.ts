@@ -1,4 +1,4 @@
-import getArticleById from "../data-access/getArticleById";
+import { articleLoader } from "../data-access/getArticlesByAuthorId";
 
 /**
  * Resolver for fetching a single article by its ID.
@@ -9,13 +9,13 @@ import getArticleById from "../data-access/getArticleById";
  * @param {any} info - Information about the execution state of the query.
  * @returns {Promise<{}>} - The article data.
  */
-const articleResolver = async (
+const articlesByAuthorIdResolver = async (
   parent: any,
   args: any,
   context: any,
   info: any
 ): Promise<any> => {
-  return getArticleById(args.id);
+  return articleLoader.load(parent.id);
 };
 
-export default articleResolver;
+export default articlesByAuthorIdResolver;
