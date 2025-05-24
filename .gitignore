@@ -128,3 +128,20 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# lock files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# pnpm store
+.pnpm-store
+
+# pnpm store server
+.pnpm-store-server
+
+# pnpm store server lock
+.pnpm-store-server.lock
+
+# pnpm store server cache
+.pnpm-store-server-cache

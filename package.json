@@ -5,7 +5,6 @@
   "main": "src/server.ts",
   "scripts": {
     "predev": "npm run create-db",
-    "start": "ts-node src/server.ts",
     "build": "tsc",
     "dev": "nodemon",
     "create-db": "ts-node ./tools/create-db-insert-data.ts"

@@ -17,7 +17,6 @@ const articlesResolver = async (
   info: any
 ): Promise<ArticleList> => {
   const articles = await getAllArticles();
-
   return {
     items: articles,
     totalCount: articles.length,
